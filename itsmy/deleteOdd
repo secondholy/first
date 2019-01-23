@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main(){
+	int len;
+	int counter = 0;
+	char masstr[40] = "";
+	char *rstr;
+	printf("vvedite stroku\n");
+	rstr = gets(masstr);
+	len = strlen(masstr);
+	for (int i=0; i<len; i++){
+		if ((i+counter) % 2 == 0){
+			counter+=1;
+			for (int j=i; j<len; j++){
+				masstr[j] = masstr[j+1];
+			}
+			masstr[len] = '\0';
+		}
+	}
+	printf ("vivod:\n%s\n", masstr);
+	return 0;
+}
