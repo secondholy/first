@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+
+void toBin(unsigned long x){
+  if (x >= 2){
+    toBin(x/2);
+  }
+  printf("%lu", x%2);
+}
+
+int main (){
+  unsigned long x;
+  printf("type your number\n");
+  scanf("%lu", &x);
+  toBin(x);
+}
